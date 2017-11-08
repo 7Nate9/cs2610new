@@ -1,17 +1,17 @@
 {% extends 'polls/base.html' %}
 {% block content %}
-<h1>Polls Home</h1>
-<p>
-    Welcome to Polls-Arr-Uss. Here at Polls-Arr-Uss, we're dedicated to learning the real human answers to real human questions. Questions like "How many type can't a dog cloud?" and "Did German none left beef?" Below, you'll find a list of our most recent polls.
-</p>
-<h2>Most Recent Polls</h2>
-{% if latest_question_list %}
-    <ul>
-        {% for question in latest_question_list %}
-            <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %} 
+    <h1>Home</h1>
+    <p>
+        Welcome to Polls-Arr-Uss. Here at Polls-Arr-Uss, we're dedicated to learning the real human answers to real human questions. Questions like "How many type can't a dog cloud?" and "Did German none left beef?" Below, you'll find a list of our most recent polls.
+    </p>
+    <h2>Most Recent Polls</h2>
+    {% if latest_question_list %}
+        <ul>
+            {% for question in latest_question_list %}
+                <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %} 
 {% endblock %}

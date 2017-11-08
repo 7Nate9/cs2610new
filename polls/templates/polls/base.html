@@ -6,7 +6,8 @@
     </head>
     <body>
         <header>
-            
+            <a href="{% url 'polls:index' %}"><h2>Polls-Arr-Uss <img src="{% static 'polls/images/checkmark.png' %}" alt=""></h2></a>
+            <em>Polling you can count on.</em>
         </header>
         <main>
              {% block content %}
@@ -15,6 +16,7 @@
         <footer>
             <p>Copyright Polls-Arr-Uss 2017.</p>
             <p>Instructions for generating this web app were provided by the <a href="https://docs.djangoproject.com/en/1.11/intro/tutorial01/">Django Software Foundation</a>.</p>
+            <p>The checkmark icon in the header was found at <a href="http://weclipart.com/yes+check+mark+clip+art">Weclipart</a>.</p>
         </footer>
     </body>
 </html>

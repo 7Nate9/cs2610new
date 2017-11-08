@@ -1,3 +1,54 @@
-li a {
-    color: green;
+html,body{
+    margin:0;
+    background-color:#ffffbb;
+    font-family:sans-serif;
+}
+header, footer{
+    padding:1em;
+    background-color:#bbffbb;
+}
+footer{
+    font-size:.7em;
+    font-weight:500;
+}
+header h2{
+    font-weight:bold;
+    font-size:1.2em;
+    text-transform:uppercase;
+    color:#000066;
+    text-align:left;
+    vertical-align:middle;
+}
+header a{
+    text-decoration:none;
+}
+main{
+    padding:1em;
+}
+h1{
+    font-weight:500;
+    color:#000066;
+}
+h2{
+    font-weight:400;
+    color:#000066;
+}
+input[type=submit]{
+    padding:1em;
+    font-size:1em;
+    font-weight:500;
+    border-radius:1em;
+    border-style:solid;
+    border-color:#000066;
+    background-color:#ffffff;
+    color:#000066;
+}
+input[type=submit]:focus, input[type=submit]:hover{
+    background-color:#5555bb;
+    color:#ffffff;
+    border-color:#000066;
+    outline:none;
+}
+.center{
+    text-align:center;
 }
