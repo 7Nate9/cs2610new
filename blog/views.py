@@ -1,8 +1,9 @@
 from django.http import HttpResponseRedirect
 from .models import Blog, Comment
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse
 from django.views import generic
+import datetime
 
 class HomeView(generic.ListView):
     template_name='blog/home.html'
@@ -27,3 +28,11 @@ def tech(request):
     
 def about(request):
     return render(request, 'blog/about.html')
+    
+def comment(request, blog_id):
+    form_data = request.POST
+    blog_obj = get_object_or_404(Blog, pk=blog_id)
+    new_comment = Comment(blog=blog_obj, nickname=form_data.__getitem__('nickname'), email=form_data.__getitem__('email'), content=form_data.__getitem__('comment'), pub_date=datetime.datetime.now())
+    new_comment.save()
+    
+    return redirect('blog:detail', pk=blog_id)

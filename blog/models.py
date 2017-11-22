@@ -19,8 +19,11 @@ class Blog(models.Model):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
         
 class Comment(models.Model):
-    blog = models.ForeignKey(Blog)
+    blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
     nickname = models.CharField(max_length=50)
     email = models.EmailField(max_length=50)
     content = models.CharField(max_length=2000)
     pub_date = models.DateTimeField('date published')
+    
+    def __str__(self):
+        return self.content
