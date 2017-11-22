@@ -23,6 +23,26 @@
     <h2>
         Comments
     </h2>
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>Add a Comment</legend>
+            <label>
+                Nickname*:<br>
+                <input type="text" name="nickname" aria-required="true">
+            </label><br>
+            <label>
+                Email Address*:<br>
+                <input type="email" name="email" aria-required="true">
+            </label><br>
+            <label>
+                Comment*<br>
+                <textarea name="comment" aria-required="true"></textarea>
+            </label><br>
+            <center>
+                <button type="submit">Post Comment</button>
+            </center>
+        </fieldset>
+    </form>
     {% if comment_list %}
         {% for comment in comment_list %}
             <article>

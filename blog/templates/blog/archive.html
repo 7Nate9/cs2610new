@@ -4,8 +4,12 @@
     Taako's Blog Archive
 {% endblock %}
 
+{% block relative_path %}
+..
+{% endblock %}
+
 {% block main %}
-    <h1>Home</h1>
+    <h1>Archive</h1>
     {% if blog_list %}
         <div class="flex">
             <div class="flexcol">

@@ -8,7 +8,7 @@ header, footer{
     flex-direction:row;
     flex-wrap:wrap;
 }
-header h2{
+header>h2{
     font-weight:bold;
     font-size:1.2em;
     text-transform:uppercase;
@@ -28,7 +28,7 @@ header nav li{
     text-align: center;
     margin-left:.1em;
 }
-header nav a, header nav a:visited{
+header nav a, header nav a:visited, button{
     background-color: #db0000;
     color: #ffffff;
     padding: 1em;
@@ -36,7 +36,7 @@ header nav a, header nav a:visited{
     border-radius:7em;
     font-weight:bold;
 }
-header nav a:focus, header nav a:hover{
+header nav a:focus, header nav a:hover, button:focus, button:hover{
     border-style: inset;
     border-radius:7em;
     border-width: medium;
@@ -54,7 +54,7 @@ h1{
     color:#bb1313;
     font-weight:500;
 }
-h2{
+h2>a, h2{
     font-size:1.5em;
     font-family:sans-serif;
     color:#cc1313;
@@ -182,4 +182,29 @@ article img{
 }
 .articleheader{
     width:100%;
+}
+
+fieldset{
+    padding:1em;
+}
+legend{
+    font-size:1.2em;
+    font-family:sans-serif;
+    color:#cc1313;
+    font-weight:700;
+}
+label{
+    font-size:1em;
+    font-family:sans-serif;
+    color:#660000;
+    font-weight:500;
+}
+input{
+    margin:1em;
+}
+
+textarea{
+   margin:1em;
+   min-width:30em;
+   min-height:7em;
 }
