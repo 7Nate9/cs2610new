@@ -1,0 +1,137 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    Taako's Tech Cheat Sheet
+{% endblock %}
+
+{% block main %}
+    <h1>Taako's Tech Cheat Sheet</h1>
+    <p>Welcome to my tech cheat sheet! Here you'll find a list of helpful git commands, their descriptions, and working examples. You'll also find HTML tags and CSS styles.<br>
+    Alternatively, see the <a href="https://git-scm.com/documentation">full documentation for git</a>, the <a href="https://www.w3schools.com/html/html_intro.asp">W3Schools HTML documentation</a>, or the <a href="https://www.w3schools.com/css/default.asp">W3Schools CSS documentation</a>.</p>
+    <p>The <code>.hidden</code> CSS class was borrowed from <a href="https://webaim.org/techniques/css/invisiblecontent/">WebAIM's tutorial on creating invisible content</a> that is accessible to screen reader users. This class is used to provide alternative text for CSS background images.</p>
+    <article class="flexrow">
+        <h2 class="articleheader">Tech Tables</h2>
+        <div id="git">
+        <table class="bgfixed">
+            <caption>Git Commands</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Command</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>git init</td>
+                    <td>Creates a git repository in the current directory.</td>
+                    <td>git init</td>
+                </tr>
+                <tr>
+                    <td>git add</td>
+                    <td>Displays the sum of all files in the repository.</td>
+                    <td>git add</td>
+                </tr>
+                <tr>
+                    <td>git commit</td>
+                    <td>Saves changes to the local repository. (May prompt awkward conversation if repository isn't ready for that kind of thing.)</td>
+                    <td>git commit -m "I'm ready to take this to the next level."</td>
+                </tr>
+                <tr>
+                    <td>git push</td>
+                    <td>Pushes saved changes down the tubes to a remote repository. If tubes are clogged, apply pipe snake as needed.</td>
+                    <td>git push really hard</td>
+                </tr>
+                <tr>
+                    <td>git go back</td>
+                    <td>The git equivalent of ctrl + Z. Undoes whatever you screwed up.</td>
+                    <td>git go back!!1!</td>
+                </tr>
+                <tr>
+                    <td>git woo</td>
+                    <td>Reassures repository after a failed commit.</td>
+                    <td>git woo -m "I'm a different person now."</td>
+                </tr>
+                <tr>
+                    <td>git django</td>
+                    <td>Releases a python.</td>
+                    <td id="python" class="image"><span class="hidden">A python</span></td>
+                </tr>
+                <tr>
+                    <td>git freaky</td>
+                    <td>Gives the repository a bottle of bourbon and tells it to have a good time.</td>
+                    <td>git freaky, git freaky, everybody in the house git freaky.</td>
+                </tr>
+                <tr>
+                    <td>git r'lyeh</td>
+                    <td>Awakens the Great Old Ones from their eternal slumber. Launches the earth into an unending age of blood and darkness. May corrupt repository.</td>
+                    <td class="image" id="darkness"><span class="hidden">Eternal darnkess</span></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <div id="css">
+        <table class="bglocal">
+            <caption>CSS Styles</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Style</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>display</td>
+                    <td>Determines how an element is displayed on the page.</td>
+                    <td>.invisible{display:none}</td>
+                </tr>
+                <tr>
+                    <td>border-style</td>
+                    <td>Stands outside the border's dressing room during a shopping montage, giving it advice on which outfit to buy.</td>
+                    <td>border-style{Uh-uh. Uh-uh. That's the one.}</td>
+                </tr>
+                <tr>
+                    <td>WYWIWYG</td>
+                    <td>A magical style that allows you to telepathically communicate the style you're going for to the browser, so it can just do what you want it to instead of making you mess around with spacing for hours.</td>
+                    <td>WYWIWYG{I just want a simple sidebar, is that too much to ask?!}</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <div id="html">
+        <table class="bgscroll">
+            <caption>HTML Tags</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Tag</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&lt;;html&gt;;</td>
+                    <td>Contains an HTML document.</td>
+                    <td>&lt;;html&gt;;(everything else goes here)&lt;;/html&gt;;</td>
+                </tr>
+                <tr>
+                    <td>&lt;b&gt;</td>
+                    <td>Makes text bold.</td>
+                    <td>&lt;b&gt;You said WHAT?!?&lt;/b&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;a&gt;</td>
+                    <td>Makes an element into the "Alpha" element, giving it superior social status to its peers.</td>
+                    <td>&lt;a&gt;I'm the captain now.&lt;/a&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;fin&gt;</td>
+                    <td>Either terminates the current document, or renders ASCII art of a shark's dorsal fin, depending on the browser.</td>
+                    <td>&lt;fin&gt;</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </article>
+{% endblock %}

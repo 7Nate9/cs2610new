@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <title>
+            {% block title %}
+            {% endblock %}
+        </title>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    </head>
+    <body>
+        <header>
+            <h2>A Snazzy Yet Classy Title</h2>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="tech.html">Tech Tips</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            {% block main %}
+            {% end block %}
+            <aside>
+                <h2>Sidebar</h2>
+                Welcome to the Sidebar, a bar on the side. Looking for a drink, good music, or just a place to hang out, but all in a more horizontal orientation? Then this is the place for you.
+            </aside>
+        </main>
+        <footer>
+            Copyright Nate Lovell 2073.
+        </footer>
+    </body>
+</html>
