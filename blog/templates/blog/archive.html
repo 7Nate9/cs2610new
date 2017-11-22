@@ -22,7 +22,7 @@
                             {{ blog.content|truncatewords:200 }}
                         </p>
                         <p>
-                            {{ blog.comment_count }}
+                            {{ blog.comment_set.count }} Comment{% if blog.comment_set.count != 1 %}s{% endif %}
                         </p>
                     </article>
                 {% endfor %}

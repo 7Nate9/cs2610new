@@ -21,7 +21,7 @@
     </article>
     <hr>
     <h2>
-        Comments
+        Comments ({{blog.comment_set.count}})
     </h2>
     <form action="{% url 'blog:comment' blog.id %}" method="POST">
         {% csrf_token %}
@@ -44,24 +44,24 @@
             </center>
         </fieldset>
     </form>
-    {% if comment_list %}
-        {% for comment in comment_list %}
-            <article>
-                <h3>
-                    {{ comment.nickname }}
-                </h3>
-                <p>
-                    {{ comment.email }}
-                </p>
-                <p>
-                    {{ comment.pub_date }}
-                </p>
-                <p>
-                    {{ comment.content }}
-                </p>
-            </article>
-        {% endfor %}
+    {% if blog.comment_set.all %}
+        <div class="comment">
+            {% for comment in blog.comment_set.all reversed %}
+                <article>
+                    <h3>
+                        {{ comment.nickname }}
+                    </h3>
+                    <div class="emailAndDate">
+                        <a href="mailto:{{ comment.email }}">{{ comment.email }}</a> | {{ comment.pub_date }}
+                    </div>
+                    <p {% if comment.content.length < 30 %}class="shortComment"{% endif %}>
+                        {{ comment.content }}
+                    </p>
+                    <hr>
+                </article>
+            {% endfor %}
+        </div>
     {% else %}
-        <p>There are no comments on this post.</p>
+        <p class="noComments">There are no comments on this post.</p>
     {% endif %}
 {% endblock %}
