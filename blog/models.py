@@ -10,7 +10,7 @@ from django.utils import timezone
 class Blog(models.Model):
     title = models.CharField(max_length=200)
     auth_name = models.CharField(max_length=50)
-    content = models.CharField(max_length=25000)
+    content = models.TextField(max_length=25000)
     pub_date = models.DateTimeField('date published')
     
     def __str__(self):
@@ -22,7 +22,7 @@ class Comment(models.Model):
     blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
     nickname = models.CharField(max_length=50)
     email = models.EmailField(max_length=50)
-    content = models.CharField(max_length=2000)
+    content = models.TextField(max_length=2000)
     pub_date = models.DateTimeField('date published')
     
     def __str__(self):
