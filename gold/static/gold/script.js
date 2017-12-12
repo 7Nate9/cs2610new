@@ -8,6 +8,20 @@ function setHandlers(){
 }
 
 function submitRequest(){
+    var weight = document.getElementById("weight").value;
+    var fromUnit = document.getElementById("fromUnit").value;
+    
+    if (isNaN(weight))
+    {
+        alert('Weight must be a number.');
+        return;
+    }
+    else if (weight == '')
+    {
+        alert('Weight is required.');
+        return;
+    }
+    
     var startTime = Date.now();
     var fiveDays = (24*60*60*1000) * 5;
     startTime -= fiveDays;
@@ -44,8 +58,6 @@ function submitRequest(){
     var value = (price * endWeight).toFixed(2);
     
     document.getElementById("results").innerHTML = "<h2>Results</h2><p>You're worth $"+ value +"! Congratulations!</p>"
-}
-
-function test(){
-    alert("Testing");
+    
+    return;
 }
