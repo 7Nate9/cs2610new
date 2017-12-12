@@ -9,7 +9,7 @@ from models import conversionFactor
 def conversion(request):
     fromUnit = request.GET['from']
     toUnit = request.GET['to']
-    weight = request.GET['value']
+    weight = float(request.GET['value'])
     
     fromConversion = conversionFactor.objects.get(unit=fromUnit)
     fromFactor = fromConversion.factor
