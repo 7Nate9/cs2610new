@@ -15,17 +15,18 @@
         </legend>
         <label>
             Weight:
-            <input type="text" name="weight">
+            <input type="text" name="weight" id="weight">
         </label>
         <label>
             Unit of Measure:
-            <select name="fromUnit">
+            <select name="fromUnit" id="fromUnit">
                 <option value="lb" selected>Pounds (lbs)</option>
                 <option value="kg">Kilograms (kgs)</option>
                 <option value="g">Grams (g)</option>
                 <option value="N">Newtons (N)</option>
             </select>
         </label>
-        <button type="submit" onclick="submitClicked();" onkeypress="submitKeyed();">Submit</button>
+        <button type="submit" id="submitWeight">Submit</button>
     </fieldset>
+    <div id="testing"></div>
 {% endblock %}

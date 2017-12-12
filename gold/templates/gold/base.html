@@ -8,7 +8,7 @@
             {% endblock %}
         </title>
     </head>
-    <body>
+    <body onload="setHandlers()">
         <header>
             <a href="{% url 'gold:index' %}"><h2>Goldz-Arr-Uss <img src="{% static 'gold/images/checkmark.png' %}" alt=""></h2></a>
             <em>Gold you can count on.</em>

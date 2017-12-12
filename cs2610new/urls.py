@@ -18,8 +18,9 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^polls/', include('polls.urls')),
-    url(r'^blog/', include('blog.urls')),
-    url(r'^gold/', include('gold.urls')),
+    url(r'^polls/', include('polls.urls', namespace="polls")),
+    url(r'^blog/', include('blog.urls', namespace="blog")),
+    url(r'^gold/', include('gold.urls', namespace="gold")),
+    url(r'^goldconvert/', include('goldconvert.urls', namespace="goldconvert")),
     url(r'^admin/', admin.site.urls),
 ]
