@@ -15,14 +15,15 @@
         </legend>
         <p>
             <label>
-                Weight:
-                <input type="text" name="weight" id="weight">
+                Weight<span style="color:#c00;" aria-hidden="true">*</span>:
+                <input type="text" name="weight" id="weight" aria-required="true" aria-describedby="weightError">
+                <p id="weightError"></p>
             </label>
         </p>
         <p>
             <label>
-                Unit of Measure:
-                <select name="fromUnit" id="fromUnit">
+                Unit of Measure<span style="color:#c00;" aria-hidden="true">*</span>:
+                <select name="fromUnit" id="fromUnit" aria-required="true">
                     <option value="lb" selected>Pounds (lbs)</option>
                     <option value="kg">Kilograms (kgs)</option>
                     <option value="g">Grams (g)</option>
@@ -32,7 +33,7 @@
             </label>
         </p>
         <p class="center">
-            <button type="submit" id="submitWeight">Submit</button>
+            <input type="submit" id="submitWeight">
         </p>
     </fieldset>
     <div id="results"></div>

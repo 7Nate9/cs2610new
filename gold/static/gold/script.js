@@ -11,14 +11,23 @@ function submitRequest(){
     var weight = document.getElementById("weight").value;
     var fromUnit = document.getElementById("fromUnit").value;
     
+    var isError = false;
+    var errorMessage = "";
     if (isNaN(weight))
     {
-        alert('Weight must be a number.');
-        return;
+        errorMessage = "Weight must be a number.";
+        isError = true;
     }
     else if (weight == '')
     {
-        alert('Weight is required.');
+        errorMessage = "Weight is required.";
+        isError = true;
+    }
+    if (isError)
+    {
+        document.getElementById("weightError").textContent = errorMessage;
+        document.getElementById("weight").focus();
+        document.getElementById("weight").setAttribute("aria-invalid", "true");
         return;
     }
     
