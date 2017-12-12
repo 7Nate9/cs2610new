@@ -5,7 +5,6 @@ from django.http import HttpResponse, JsonResponse
 from models import conversionFactor
 
 # Create your views here.
-#def conversion(request, fromUnit, toUnit, weight):
 def conversion(request):
     fromUnit = request.GET['from']
     toUnit = request.GET['to']
@@ -18,11 +17,7 @@ def conversion(request):
     toFactor = toConversion.factor
     
     endWeight = weight * fromFactor / toFactor
+    print(endWeight)
     response = JsonResponse({'unit':toUnit, 'value':endWeight})
-    response = HttpResponse()
     
-    return response
-    
-def testing(request):
-    response = JsonResponse({'unit':'t_oz', 'value':12})
     return response

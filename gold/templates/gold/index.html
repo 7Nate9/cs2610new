@@ -13,20 +13,27 @@
         <legend>
             Enter your weight
         </legend>
-        <label>
-            Weight:
-            <input type="text" name="weight" id="weight">
-        </label>
-        <label>
-            Unit of Measure:
-            <select name="fromUnit" id="fromUnit">
-                <option value="lb" selected>Pounds (lbs)</option>
-                <option value="kg">Kilograms (kgs)</option>
-                <option value="g">Grams (g)</option>
-                <option value="N">Newtons (N)</option>
-            </select>
-        </label>
-        <button type="submit" id="submitWeight">Submit</button>
+        <p>
+            <label>
+                Weight:
+                <input type="text" name="weight" id="weight">
+            </label>
+        </p>
+        <p>
+            <label>
+                Unit of Measure:
+                <select name="fromUnit" id="fromUnit">
+                    <option value="lb" selected>Pounds (lbs)</option>
+                    <option value="kg">Kilograms (kgs)</option>
+                    <option value="g">Grams (g)</option>
+                    <option value="N">Newtons (N)</option>
+                    <option value="t_oz">Troy Ounces (oz t)</option>
+                </select>
+            </label>
+        </p>
+        <p>
+            <button type="submit" id="submitWeight">Submit</button>
+        </p>
     </fieldset>
-    <div id="testing"></div>
+    <div id="results"></div>
 {% endblock %}

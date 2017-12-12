@@ -33,8 +33,7 @@ function submitRequest(){
     var data = dataset.data;
     var price = data[0][1];
     
-    var unitconvURL = "/goldconvert/?from=" + document.getElementById("fromUnit").value + "&to=t_oz&value=" + document.getElementById("weight").value;document.getElementById("testing").textContent=unitconvURL;
-    //var unitconvURL = "/goldconvert/testing";
+    var unitconvURL = "/goldconvert/?from=" + document.getElementById("fromUnit").value + "&to=t_oz&value=" + document.getElementById("weight").value;
     request = new XMLHttpRequest;
     request.open("GET", unitconvURL, false);
     request.send(null);
@@ -42,5 +41,11 @@ function submitRequest(){
     jsonResponse = JSON.parse(request.responseText);
     var endWeight = jsonResponse.value;
     
-    document.getElementById("testing").textContent = "Results: " + endWeight;
+    var value = (price * endWeight).toFixed(2);
+    
+    document.getElementById("results").innerHTML = "<h2>Results</h2><p>You're worth $"+ value +"! Congratulations!</p>"
+}
+
+function test(){
+    alert("Testing");
 }
